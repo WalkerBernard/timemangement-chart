@@ -1,19 +1,14 @@
 # Time Chart
 
 [![npm version](https://img.shields.io/npm/v/timechart.svg)](https://www.npmjs.com/package/timechart)
-[![GitHub Pages](https://github.com/huww98/TimeChart/workflows/GitHub%20Pages/badge.svg)](https://huww98.github.io/TimeChart/)
 
 An chart library specialized for large-scale time-series data, built on WebGL.
 
 Flexable. Realtime monitor. High performance interaction.
 
-[Live Demo](https://huww98.github.io/TimeChart/demo/)
-
 ## Performance
 
 Taking advantage of the newest WebGL technology, we can directly talk to GPU, pushing the limit of the performance of rendering chart in browser. This library can display almost unlimited data points, and handle user interactions (pan / zoom) at 60 fps.
-
-We compare the performance of this library and some other popular libraries. See [Performance](https://huww98.github.io/TimeChart/docs/performance)
 
 ## Usage
 
@@ -38,9 +33,7 @@ We compare the performance of this library and some other popular libraries. See
   <script src="https://cdn.jsdelivr.net/npm/d3-time-format@4"></script>
   <script src="https://cdn.jsdelivr.net/npm/d3-scale@4"></script>
   <script src="https://cdn.jsdelivr.net/npm/d3-selection@3"></script>
-  <script src="https://cdn.jsdelivr.net/npm/d3-axis@3"></script>
-  <script src="https://huww98.github.io/TimeChart/dist/timechart.min.js"></script>
-  ```
+  <script src="https://cdn.jsdelivr.net/npm/d3-axis@3"></script>  ```
 
 ### Basic
 
@@ -59,7 +52,6 @@ const chart = new TimeChart(el, {
     series: [{ data }],
 });
 ```
-[Live](https://huww98.github.io/TimeChart/demo/basic.html)
 
 ### Assemble Your Own Chart
 
@@ -111,7 +103,6 @@ For users who use HTML script tag to import TimeChart, use this instead:
 
 ```HTML
 <!-- D3 scripts -->
-<script src="https://huww98.github.io/TimeChart/dist/timechart.min.js"></script>
 <script>
     const el = document.getElementById('chart');
     const chart = new TimeChart.core(el, {
@@ -123,8 +114,6 @@ For users who use HTML script tag to import TimeChart, use this instead:
     });
 </script>
 ```
-[Demo](https://huww98.github.io/TimeChart/demo/plugins/assemble.html)
-
 ### Dynamic Data
 
 To add/remove data dynamically, just change the data array with conventional array prototype methods, then call `chart.update()`.
@@ -372,7 +361,6 @@ const chart = new TimeChart(el, {
 
 * `chart.dispose()`: Dispose all the resources used by this chart instance.
   Note: We use shadow root to protect the chart from unintended style conflict. However, there is no easy way to remove the shadow root after dispose.
-  But you can reuse the same HTML element to create another TimeChart. [Example](https://huww98.github.io/TimeChart/demo/reset.html)
 
 * `chart.onResize()`: Calculate size after layout changes.
   This method is automatically called when window size changed.
@@ -415,8 +403,6 @@ For example, we can support dark theme easily:
     --background-overlay: black;
 }
 ```
-
-[Live](https://huww98.github.io/TimeChart/demo/dark.html)
 
 The `--background-overlay` CSS property is used in some non-transparent element on top on the chart.
 
